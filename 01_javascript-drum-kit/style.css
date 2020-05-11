@@ -1,51 +1,67 @@
-html {
-  font-size: 10px;
-  background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
-  background-size: cover;
+* {
+    box-sizing: border-box
 }
 
-body,html {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+html {
+    font-size: 10px;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9));
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+body {
+    padding: 10vw;
+    height: 100vh;
+    width: 100vw;
 }
 
 .keys {
-  display: flex;
-  flex: 1;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: calc(1vw + 10px) 1vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
 }
 
 .key {
-  border: .4rem solid black;
-  border-radius: .5rem;
-  margin: 1rem;
-  font-size: 1.5rem;
-  padding: 1rem .5rem;
-  transition: all .07s ease;
-  width: 10rem;
-  text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.4);
-  text-shadow: 0 0 .5rem black;
+    cursor: pointer;
+    /*border: 0.2rem solid black;*/
+    border-radius: 4px;
+    font-size: 1.5rem;
+    transition: all .1s ease;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #cb4e4e;
+    box-shadow: 0 10px #ab3c3c;
 }
 
 .playing {
-  transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+    transform: translateY(10px);
+    box-shadow: none;
 }
 
-kbd {
-  display: block;
-  font-size: 4rem;
+div.key > span:not(.sound) {
+    font-size: 8rem;
 }
+
 
 .sound {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  color: #ffc600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
 }
