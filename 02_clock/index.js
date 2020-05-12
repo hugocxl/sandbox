@@ -1,10 +1,33 @@
 'use strict'
 
-window.onload = setDate
+window.onload = function () {
+  setDate()
+  setAxis()
+}
 
 const secondHand = document.querySelector('.second-hand')
 const minsHand = document.querySelector('.min-hand')
 const hourHand = document.querySelector('.hour-hand')
+const clockFace = document.querySelector('.clock-face')
+
+function setAxis () {
+  const numberOfSplits = 12
+  const innerPartitions = 5
+
+  for (let i = 0; i < numberOfSplits * innerPartitions; i++) {
+    const secondsDegree = (i / 60) * 360 + 90
+    const indicator = document.createElement('div')
+    indicator.className = 'indicator'
+    indicator.style.transform = `rotate(${secondsDegree}deg)`
+
+    if (i % 5 === 0) {
+      indicator.style.borderLeft = '14px solid #f4eed7'
+    }
+
+    clockFace.appendChild(indicator)
+  }
+
+}
 
 function setDate () {
   const now = new Date()
