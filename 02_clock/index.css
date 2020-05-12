@@ -7,6 +7,8 @@ html {
 }
 
 body {
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
