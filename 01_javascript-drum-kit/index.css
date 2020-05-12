@@ -4,7 +4,7 @@
 
 html {
     font-size: 10px;
-    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9));
+    background: #1b1e23;
 }
 
 body, html {
