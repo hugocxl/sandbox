@@ -10,6 +10,12 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
     background: linear-gradient(to bottom right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     overflow: hidden auto;
+    color: #382e48;
+}
+
+h1 {
+    letter-spacing: -.05em;
+    font-size: 3rem;
 }
 
 header {
@@ -28,7 +34,7 @@ header {
     width: 100%;
     height: 100%;
     padding: 3rem;
-    gap: 1rem;
+    gap: 2rem;
     overflow: auto hidden;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

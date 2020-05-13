@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS Variables</title>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	
+	
+	<body>
+		
+		<div class="controls">
+			<div class="controls__item">
+				<label for="spacing">Spacing:</label>
+				<input id="spacing" type="range" name="spacing" min="0" max="300" value="100" data-sizing="px">
+			</div>
+			
+			<div class="controls__item">
+				<label for="font-size">Font size:</label>
+				<input id="font-size" type="range" name="font-size" min="10" max="25" value="20" data-sizing="px">
+			</div>
+			
+			<div class="controls__item">
+				<label for="background">Background Color:</label>
+				<input id="background" type="color" name="background" value="#ffc600">
+			</div>
+		</div>
+		
+		
+		<div id="project__sample">
+			<h1>CSS Variables</h1>
+			<q>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</q>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ante malesuada, tristique massa at, ultricies
+				augue. Curabitur fermentum lorem eget tortor tincidunt pulvinar. In in fringilla turpis. Quisque sed ante metus.
+				Proin nec lorem a nunc pharetra dignissim. In vel odio sem. Quisque efficitur quam eget urna mattis, et blandit
+				magna ultrices. Morbi ac orci ligula. Fusce iaculis purus at ipsum ultrices, vel facilisis lacus maximus.
+				Quisque vitae felis pretium felis luctus tincidunt vitae a augue. Duis porta dui sit amet nibh suscipit
+				condimentum. Mauris blandit sapien eget felis tincidunt, ac maximus enim vestibulum.
+			</p>
+			
+			<p>
+				Nunc semper non massa vitae mollis. Nullam molestie lorem felis, in volutpat nulla pulvinar sed. Etiam porttitor
+				lorem id egestas viverra. Suspendisse dui neque, auctor eget risus sit amet, laoreet posuere nisi. Nulla
+				eleifend feugiat pellentesque. Pellentesque nunc nisi, volutpat non pharetra quis, ornare eu ex. Pellentesque
+				sollicitudin tincidunt tincidunt. Pellentesque nulla quam, vehicula eu est ac, pellentesque rutrum dui. Sed a
+				posuere augue. Nullam id velit a mi varius congue quis ut nisi. Vivamus efficitur molestie felis a posuere.
+			</p>
+			
+			<button onclick="changeThemeMode()">Switch theme mode</button>
+		
+		</div>
+		
+		<script src="index.js"></script>
+	</body>
+</html>

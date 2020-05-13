@@ -1,0 +1,43 @@
+:root {
+    --background: white;
+    --color: #282c35;
+    --spacing: 100px;
+    --font-size: 20px;
+}
+
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    background: var(--background);
+    text-align: left;
+    padding-bottom: 200px;
+}
+
+.controls {
+    width: 100%;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: baseline;
+}
+
+.controls__item {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+
+#project__sample {
+    color: var(--color);
+    font-size: var(--font-size);
+    padding: 1rem var(--spacing)
+}
+
+input {
+    width: 100px;
+    height: 20px;
+}
