@@ -35,32 +35,56 @@ header {
     height: 100%;
     padding: 3rem;
     gap: 2rem;
-    overflow: auto hidden;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    overflow: hidden;
 }
 
-.project {
+.project, .project > .overlay {
     text-decoration: none;
     background: grey;
-    z-index: 4;
-    /*min-width: 100px;*/
     min-height: 200px;
     border-radius: 4px;
     box-shadow: rgba(34, 35, 58, 0.2) 0px 8px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     background-size: cover;
     background-repeat: no-repeat;
     font-weight: normal;
+    transition: all 0.1s ease-in-out;
+    position: relative;
+}
+
+.project > .overlay {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: #f7df1e;
+    position: absolute;
+    transition: all 0.1s ease-in-out;
+}
+
+.project > span {
+    opacity: 0;
+    color: #1b1e23;
+    background: white;
+    padding: 0px 32px;
+    z-index: 2;
     transition: all 0.1s ease-in-out;
 }
 
 .project:hover {
     transform: scale(1.025);
     box-shadow: rgba(34, 35, 58, 0.25) 0px 12px 20px;
+}
+
+.project:hover > .overlay {
+    opacity: 1;
+}
+
+.project:hover > span {
+    opacity: 1;
 }
 
 

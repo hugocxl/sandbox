@@ -1,12 +1,5 @@
 const keys = document.querySelectorAll('.key')
 
-window.addEventListener('keydown', playSound)
-keys.forEach(key => {
-  key.addEventListener('transitionend', removeTransition)
-  key.addEventListener('click', playSound)
-  key.addEventListener('touchstart', playSound)
-})
-
 function removeTransition (e) {
   if (e.propertyName !== 'transform') {
     return
@@ -16,6 +9,8 @@ function removeTransition (e) {
 }
 
 function playSound (e) {
+  e.stopPropagation()
+  e.preventDefault()
   let code = null
 
   if (e.type === 'keydown') {
@@ -35,3 +30,10 @@ function playSound (e) {
   audio.currentTime = 0
   audio.play()
 }
+
+window.addEventListener('keydown', playSound)
+keys.forEach(key => {
+  key.addEventListener('transitionend', removeTransition)
+  key.addEventListener('click', playSound)
+  key.addEventListener('touchstart', playSound)
+})

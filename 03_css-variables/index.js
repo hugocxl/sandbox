@@ -1,5 +1,6 @@
 // querySelectorAll returns a NodeList, a array-type object (NOT an array)
 const inputs = document.querySelectorAll('.controls input')
+const selects = document.querySelectorAll('.controls select')
 
 function handleUpdater () {
   // dataset returns and object with all the data-xxx attributes that the element has
@@ -22,3 +23,5 @@ function changeThemeMode () {
 
 // Set listeners
 inputs.forEach(input => input.addEventListener('change', handleUpdater))
+inputs.forEach(input => input.name !== 'background' && input.addEventListener('mousemove', handleUpdater))
+selects.forEach(input => input.addEventListener('change', handleUpdater))
