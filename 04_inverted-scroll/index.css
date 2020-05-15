@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#container {
+    height: 100vh;
+    overflow: hidden scroll;
+}
+
+
+#cards-container {
+    height: 300vh;
+    background-color: #eacda3;
+    flex-wrap: nowrap;
+    overflow: hidden auto;
+    position: relative;
+    display: flex;
+}
+
+
+.card {
+    opacity: 0.1;
+    overflow: hidden;
+    min-width: 60vw;
+    max-width: 60vw;
+    min-height: 50vh;
+    max-height: 50vh;
+    background-color: #1b1e23;
+    position: fixed;
+    top: 25vh;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
