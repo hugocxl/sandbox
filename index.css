@@ -1,3 +1,7 @@
+:root {
+  --transition: all 0.17s ease;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,27 +22,28 @@ h1 {
 }
 
 header {
+  padding: 2.5rem 1rem;
   top: 0;
   position: sticky;
-  height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   background: white;
-  transform: translateY(20px);
+  text-align: center;
 }
 
 footer {
+  padding: 2.5rem 1rem;
+  text-align: center;
   width: 100%;
-  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #projects__container {
-  padding: 4rem;
+  padding: 1rem 4rem;
   gap: 2.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -50,43 +55,68 @@ footer {
   text-decoration: none;
   background: #f7df1e;
   min-height: 200px;
-  border-radius: 0px;
-  box-shadow: grey 0.8rem 0.8rem 0px;
+  box-shadow: grey 0.6rem 0.6rem 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
-  font-weight: normal;
-  transition: all 0.1s ease-in-out;
+  transition: var(--transition);
   position: relative;
+  color: black;
 }
 
-.project > span {
-  color: black;
+.project__title {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  transition: var(--transition);
   background-color: white;
   position: absolute;
   right: 0;
   bottom: 0;
-  padding: 0px 32px;
-  transition: all 0.17s ease;
+  padding: 4px 32px;
+  transform-origin: bottom right;
+}
+
+.project__description {
+  transition: var(--transition);
+  opacity: 0;
+  background-color: white;
+  width: 100%;
+  padding: 1rem;
 }
 
 .project:hover {
-  transform: scale(1.025);
-  box-shadow: grey 1rem 1rem 0px;
+  transform: scale(1.025) translateY(-8px);
+  box-shadow: grey 0.9rem 0.9rem 0px;
+}
+
+.project:hover .project__description {
+  opacity: 1;
+}
+
+.project:hover .project__title {
+  transform: scale(1.1);
+  font-weight: 600;
 }
 
 #project__clock {
-  background-image: url('public/images/02.png');
+  background-image: url('public/images/project__clock.png');
 }
 
 #project__canvas-game {
+  background-image: url('public/images/project__canvas-game.png');
   grid-column: span 2;
   grid-row: span 2;
 }
 
 #project__drum-kit {
+  background-image: url('public/images/project__drum-kit.png');
+  grid-column: span 2;
+}
+
+#project__css-variables {
+  background-image: url('public/images/project__css-variables.png');
   grid-column: span 2;
 }
 
