@@ -1,76 +1,70 @@
 * {
-    box-sizing: border-box;
-}
-
-html {
-    background: #1b1e23;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .clock {
-    width: 30rem;
-    height: 30rem;
-    border-radius: 50%;
-    position: relative;
-    padding: 2rem;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  position: relative;
+  padding: 2rem;
 }
 
 .clock-face {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform: translateY(-2px); /* account for the height of the clock hands */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-2px); /* account for the height of the clock hands */
 }
 
 .center {
-    position: absolute;
-    top: calc(50% - 10px);
-    left: calc(50% - 10px);
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    background: #4b9aaa;
-    z-index: 3;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #4b9aaa;
+  z-index: 3;
 }
 
 .hand {
-    border-radius: 6px;
-    z-index: 2;
-    width: 50%;
-    height: 4px;
-    background: #f4eed7;
-    position: absolute;
-    top: 50%;
-    transform: rotate(90deg);
-    transform-origin: 100%;
-    transition: all 0.05s cubic-bezier(0.25, 0.1, 0.24, 2.66);
+  border-radius: 6px;
+  z-index: 2;
+  width: 50%;
+  height: 4px;
+  background: #1b1e23;
+  position: absolute;
+  top: 50%;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  transition: all 0.05s cubic-bezier(0.25, 0.1, 0.24, 2.66);
 }
 
 .hour-hand {
-    width: 40%;
-    left: 10%;
+  width: 40%;
+  left: 10%;
 }
 
 .second-hand {
-    background: #4b9aaa;
+  background: #4b9aaa;
 }
 
-
 .indicator {
-    border-radius: 3px;
-    transform-origin: 100%;
-    width: 50%;
-    height: 3px;
-    border-left: 3px solid #4b9aaa;
-    position: absolute;
-    top: 50%;
+  border-radius: 3px;
+  transform-origin: 100%;
+  width: 50%;
+  height: 3px;
+  border-left: 3px solid #4b9aaa;
+  position: absolute;
+  top: 50%;
 }

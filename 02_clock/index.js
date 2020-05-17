@@ -21,7 +21,7 @@ function setAxis () {
     indicator.style.transform = `rotate(${secondsDegree}deg)`
 
     if (i % 5 === 0) {
-      indicator.style.borderLeft = '14px solid #f4eed7'
+      indicator.style.borderLeft = '14px solid #1b1e23'
     }
 
     clockFace.appendChild(indicator)

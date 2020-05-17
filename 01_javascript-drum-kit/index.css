@@ -1,64 +1,63 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
 body {
-    background: #1b1e23;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: #1b1e23;
+  font-family: Menlo, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .keys {
-    width: 80vh;
-    height: 80vh;
-    gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    justify-content: center;
-    align-content: center;
+  padding: 10px;
+  width: 100vw;
+  height: 100vh;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  align-content: center;
 }
 
 .key {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 6px;
-    transition: all .05s ease-in-out;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0px;
+  transition: all 0.05s ease-in-out;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
 }
 
-
-.key:active, .key:focus {
-    border: 1px solid #f7df1e;
+.key:active,
+.key:focus {
+  border: 1px solid #f7df1e;
 }
-
 
 .playing {
-    transform: scale(0.975);
-    border: 1px solid #f7df1e;
+  transform: scale(0.975);
+  border: 1px solid #f7df1e;
 }
 
 div.key > span:not(.sound) {
-    font-size: 8rem;
-    pointer-events: none;
+  font-size: 2rem;
+  pointer-events: none;
 }
 
-
 .sound {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    color: #ffc600;
+  /* font-size: 1.2rem; */
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
 }
