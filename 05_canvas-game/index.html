@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./styles/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--		<h1 id="game-title">-->
+    <!--			Sphere Collapse-->
+    <!--		</h1>-->
+    <!--		-->
+    <canvas id="board" width="0" height="0"></canvas>
+
+    <div id="panel">
+      <h2>Level:</h2>
+      <span id="panel-level">1</span>
+
+      <h2>Score:</h2>
+      <span id="panel-score">0</span>
+
+      <h2>Total balls</h2>
+      <span id="panel-balls">0</span>
+    </div>
+
+    <div id="modal-container">
+      <div class="modal" id="modal-start">
+        <h1>New game 🕹</h1>
+        <span>Place your ball by trying to hit as many balls as possible.</span>
+        <button id="button-start">Start game</button>
+      </div>
+
+      <div class="modal hidden" id="modal-reset">
+        <h1>Failed 😤</h1>
+        <span>Ups! You didn't hit enough balls</span>
+        <button id="button-reset">Reset game</button>
+      </div>
+
+      <div class="modal hidden" id="modal-next">
+        <h1>Completed 👏🏻</h1>
+        <span>Great! You did all the balls.</span>
+        <button id="button-next">Next level</button>
+      </div>
+    </div>
+
+    <!--		<a class="button" href="https://github.com/hcorta/sphere-collapse">View on Github</a>-->
+  </body>
+
+  <script type="module" src="./index.mjs"></script>
+</html>
