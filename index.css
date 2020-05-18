@@ -62,10 +62,10 @@ iframe {
 
 .project {
   z-index: 4;
-  border: 4px solid white;
+  border: 4px solid black;
   background: white;
   min-height: 200px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0.75rem 0.75rem 0px;
+  box-shadow: rgba(0, 0, 0, 1) 0.5rem 0.5rem 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,8 +90,8 @@ iframe {
 }
 
 .project__description {
-  border: 4px solid white;
-  box-shadow: rgba(0, 0, 0, 1) 0.85rem 0.85rem 0px;
+  border: 4px solid black;
+  box-shadow: rgba(0, 0, 0, 1) 1rem 1rem 0px;
   text-decoration: underline;
   transition: var(--transition);
   position: absolute;
@@ -105,10 +105,9 @@ iframe {
 }
 
 .project:hover {
-  filter: drop-shadow();
   z-index: 10;
   transform: scale(1.05) translateY(-8px);
-  box-shadow: rgba(0, 0, 0, 1) 0.85rem 0.85rem 0px;
+  box-shadow: rgba(0, 0, 0, 1) 1rem 1rem 0px;
 }
 
 .project:hover .project__description {
@@ -120,7 +119,7 @@ iframe {
 }
 
 .project__description:hover {
-  background-color: skyblue;
+  background-color: cyan;
 }
 
 #project__canvas-game {
