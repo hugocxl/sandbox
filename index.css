@@ -79,6 +79,8 @@ iframe {
 }
 
 .project__title {
+  border-left: 4px solid black;
+  border-top: 4px solid black;
   transition: var(--transition);
   background-color: white;
   position: absolute;
@@ -133,15 +135,14 @@ iframe {
   grid-row: span 2;
 }
 
-#project__css-variables,
-#project__css-variables .project__description {
-  border-color: black;
+#project__css-variables {
   grid-column: span 2;
+  grid-row: span 2;
 }
 
-#project__clock,
-#project__clock .project__description {
-  border-color: black;
+#project__text-brush {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 @media screen and (max-width: 980px) {
