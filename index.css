@@ -1,5 +1,5 @@
 :root {
-  --transition: all 0.1s ease-in-out;
+  --transition: all 0.17s ease-in-out;
   --padding-general: 16rem;
   --border-radius: 16px;
 }
@@ -48,6 +48,9 @@ header {
 }
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   width: 100%;
   position: fixed;
@@ -57,7 +60,7 @@ footer {
 }
 
 #projects__container {
-  background-image: linear-gradient(to bottom, #ffecd2 0%, #fcb69f 100%);
+  background: #f6f6f6;
   overflow: hidden auto;
   width: 100%;
   position: absolute;
@@ -68,7 +71,9 @@ footer {
 }
 
 .project {
-  box-shadow: 0 8px 15px rgba(36, 37, 38, 0.18);
+  /* box-shadow: 0 8px 15px rgba(36, 37, 38, 0.18); */
+  box-shadow: 2px 2px 0px rgba(36, 37, 38, 1);
+  border: 1px solid rgba(36, 37, 38, 1);
   background-color: #f5f5f5;
   z-index: 2;
   border-radius: var(--border-radius);
@@ -106,7 +111,12 @@ footer {
 .project:hover {
   z-index: 10;
   transform: translateY(-4px);
-  box-shadow: 0 16px 35px rgba(36, 37, 38, 0.18);
+  box-shadow: 4px 4px 0px rgba(36, 37, 38, 1);
+}
+
+.project:active {
+  transform: translateY(0px);
+  box-shadow: none;
 }
 
 /* 
